@@ -10,7 +10,7 @@ cd SUPERCOMPUTING
 
 cd assignments/assignment\_01
 
-ls # just checking if in the right place or not
+ls \*\*| just checking if in the right place or not\*\*
 
 
 
@@ -48,7 +48,7 @@ cd scripts
 
 touch salutations.py
 
-echo "print('Good day to you fine sir')" > salutations.py # this writes the line to the python file
+echo "print('Good day to you fine sir')" > salutations.py \*\*| this writes the line to the python file\*\*
 
 cd ..
 
@@ -114,13 +114,13 @@ touch assignment\_01\_essay.md
 
 
 
-git status # checking what would be added
+git status checking what would be added
 
-git add . # readding everything to the next commit because I don't want to type out each file 
+git add . \*\*| readding everything to the next commit because I don't want to type out each file\*\*
 
-git status # rechecking what is to be added
+git status \*\*| rechecking what is to be added\*\*
 
-git commit -m "First Assignment\_01 directory and essay commit" # committing the add
+git commit -m "First Assignment\_01 directory and essay commit" \*\*| committing the add\*\*
 
-git push # pushing to the GitHub repository
+git push \*\*| pushing to the GitHub repository\*\*
 
