@@ -1,8 +1,8 @@
-\# Supercomputing Assignment 01
+# Supercomputing Assignment 01
 
 
 
-\## Navigating to SUPERCOMPUTING folder from home
+## Navigating to SUPERCOMPUTING folder from home
 
 
 
@@ -10,11 +10,11 @@ cd SUPERCOMPUTING
 
 cd assignments/assignment\_01
 
-ls \*\*| just checking if in the right place or not\*\*
+ls **| just checking if in the right place or not**
 
 
 
-\## Creating data directory and adding files
+## Creating data directory and adding files
 
 
 
@@ -38,7 +38,7 @@ cd ../..
 
 
 
-\## Creating scripts directory and adding file
+## Creating scripts directory and adding file
 
 
 
@@ -48,13 +48,13 @@ cd scripts
 
 touch salutations.py
 
-echo "print('Good day to you fine sir')" > salutations.py \*\*| this writes the line to the python file\*\*
+echo "print('Good day to you fine sir')" > salutations.py **| this writes the line to the python file**
 
 cd ..
 
 
 
-\## Creating results directory and adding file
+## Creating results directory and adding file
 
 
 
@@ -72,7 +72,7 @@ cd ../..
 
 
 
-\## Creating configs directory and adding file
+## Creating configs directory and adding file
 
 
 
@@ -86,7 +86,7 @@ cd ..
 
 
 
-\## Creating log directory and adding file
+## Creating log directory and adding file
 
 
 
@@ -100,7 +100,7 @@ cd ..
 
 
 
-\## Create assignment\_01\_essay.md
+## Create assignment\_01\_essay.md
 
 
 
@@ -110,17 +110,17 @@ touch assignment\_01\_essay.md
 
 
 
-\## Add Commit Push
+## Add Commit Push
 
 
 
 git status checking what would be added
 
-git add . \*\*| readding everything to the next commit because I don't want to type out each file\*\*
+git add . **| readding everything to the next commit because I don't want to type out each file**
 
-git status \*\*| rechecking what is to be added\*\*
+git status **| rechecking what is to be added**
 
-git commit -m "First Assignment\_01 directory and essay commit" \*\*| committing the add\*\*
+git commit -m "First Assignment\_01 directory and essay commit" **| committing the add**
 
-git push \*\*| pushing to the GitHub repository\*\*
+git push **| pushing to the GitHub repository**
 
