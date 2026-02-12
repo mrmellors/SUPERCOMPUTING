@@ -152,11 +152,3 @@ I asked ChatGPT and it said that it wouldn't rewrite the README, it would pull n
 
 Well it happened anyway so I added then commit and then pulled again. 
 
-
-
-
-
-
-
-
-
