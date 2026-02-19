@@ -1,26 +1,26 @@
-\# Assignment 3 - Matthew Mellors - 2/18/2025
+# Assignment 3 - Matthew Mellors - 2/18/2025
 
 
 
-\## Directory Structure 
+## Directory Structure 
 
 
 
-/assingment\_03
+assingment_03
 
 
 
-&nbsp;	/data
+	/data
 
-&nbsp;		GCF\_000001735.4\_TAIR10.1\_genomic.fna.gz
-
-
-
-\## Getting data
+		GCF\_000001735.4\_TAIR10.1\_genomic.fna.gz
 
 
 
-cd SUPERCOMPUTING/assignments/assignment\_03
+## Getting data
+
+
+
+cd SUPERCOMPUTING/assignments/assignment_03
 
 
 
@@ -32,11 +32,11 @@ cd data
 
 
 
-wget https://gzahn.github.io/data/GCF\_000001735.4\_TAIR10.1\_genomic.fna.gz
+wget https://gzahn.github.io/data/GCF_000001735.4_TAIR10.1_genomic.fna.gz
 
 
 
-gunzip GCF\_000001735.4\_TAIR10.1\_genomic.fna.gz
+gunzip GCF_000001735.4_TAIR10.1_genomic.fna.gz
 
 
 
@@ -44,11 +44,11 @@ ls
 
 
 
-\## Unix Commands
+## Unix Commands
 
 
 
-cat GCF\_000001735.4\_TAIR10.1\_genomic.fna.gz    haha don't recommend
+cat GCF_000001735.4_TAIR10.1_genomic.fna.gz    haha don't recommend
 
 
 
@@ -62,65 +62,65 @@ clear
 
 
 
-\### 1. How many sequences are in the FASTA file? (answer=7)
+### 1. How many sequences are in the FASTA file? (answer=7)
 
 
 
-\*\*Ans: grep "^>" GCF\* | wc -l \*\*
+**Ans: grep "^>" GCF* | wc -l **
 
 
 
-\### 2. What is the total number of nucleotides (not including header lines or newlines)? (answer=119,668,634)
+### 2. What is the total number of nucleotides (not including header lines or newlines)? (answer=119,668,634)
 
 
 
-\*\*Ans: grep -v "^>" GCF\* | tr -d "\\n" | wc -c \*\*
+**Ans: grep -v "^>" GCF* | tr -d "\n" | wc -c **
 
 
 
-\### 3. How many total lines are in the file? (answer=14)
+### 3. How many total lines are in the file? (answer=14)
 
 
 
-\*\*Ans: wc -l GCF\* \*\*
+**Ans: wc -l GCF* **
 
 
 
-\### 4. How many header lines contain the word "mitochondrion"? (answer=1)
+### 4. How many header lines contain the word "mitochondrion"? (answer=1)
 
 
 
-\*\*Ans: grep "^>" GCF\* | grep "mitochondrion" | wc -l \*\*
+**Ans: grep "^>" GCF* | grep "mitochondrion" | wc -l **
 
 
 
-\### 5. How many header lines contain the word "chromosome"? (answer=5)
+### 5. How many header lines contain the word "chromosome"? (answer=5)
 
 
 
-\*\*Ans: grep "^>" GCF\* | grep "chromosome" | wc -l\*\*
+**Ans: grep "^>" GCF* | grep "chromosome" | wc -l**
 
 
 
-\### 6. How many nucleotides are in each of the first 3 chromosome sequences? (answer=30,427,672   19,698,290  23,459,831)
+### 6. How many nucleotides are in each of the first 3 chromosome sequences? (answer=30,427,672   19,698,290  23,459,831)
 
 
 
-\*\* A better answer after completing question 10 
+** A better answer after completing question 10 
 
 
 
-paste <(grep "^>" GCF\*) <(grep -v "^>" GCF\*) | grep "chromosome 1" | cut -f2 | wc -c
+paste <(grep "^>" GCF*) <(grep -v "^>" GCF*) | grep "chromosome 1" | cut -f2 | wc -c
 
 
 
-paste <(grep "^>" GCF\*) <(grep -v "^>" GCF\*) | grep "chromosome 2" | cut -f2 | wc -c
+paste <(grep "^>" GCF*) <(grep -v "^>" GCF*) | grep "chromosome 2" | cut -f2 | wc -c
 
 
 
-paste <(grep "^>" GCF\*) <(grep -v "^>" GCF\*) | grep "chromosome 3" | cut -f2 | wc -c
+paste <(grep "^>" GCF*) <(grep -v "^>" GCF*) | grep "chromosome 3" | cut -f2 | wc -c
 
-\*\*
+**
 
 
 
@@ -130,11 +130,11 @@ Janky (but technically correct) Ans:
 
 
 
-threeline=$(head -n 3 GCF\* | grep -v "^>" | wc -c)
+threeline=$(head -n 3 GCF* | grep -v "^>" | wc -c)
 
-fiveline=$(head -n 5 GCF\* | grep -v "^>" | wc -c)
+fiveline=$(head -n 5 GCF* | grep -v "^>" | wc -c)
 
-sevenline=$(head -n 7 GCF\* | grep -v "^>" | wc -c)
+sevenline=$(head -n 7 GCF* | grep -v "^>" | wc -c)
 
 
 
@@ -154,19 +154,19 @@ echo $(( ${sevenline} - ${fiveline} ))
 
 
 
-\### 7. How many nucleotides are in the sequence for 'chromosome 5'? (answer=26,975,503)
+### 7. How many nucleotides are in the sequence for 'chromosome 5'? (answer=26,975,503)
 
 
 
-\*\* A better answer after completing question 10 
+** A better answer after completing question 10 
 
 
 
-paste <(grep "^>" GCF\*) <(grep -v "^>" GCF\*) | grep "chromosome 5" | cut -f2 | wc -c
+paste <(grep "^>" GCF*) <(grep -v "^>" GCF*) | grep "chromosome 5" | cut -f2 | wc -c
 
 
 
-\*\*
+**
 
 
 
@@ -174,9 +174,9 @@ Janky Ans:
 
 
 
-elevenline=$(head -n 11 GCF\* | grep -v "^>" | wc -c)
+elevenline=$(head -n 11 GCF* | grep -v "^>" | wc -c)
 
-nineline=$(head -n 9 GCF\* | grep -v "^>" | wc -c)
+nineline=$(head -n 9 GCF* | grep -v "^>" | wc -c)
 
 
 
@@ -186,41 +186,41 @@ echo $(( ${elevenline} - ${nineline} ))
 
 
 
-\### 8. How many sequences contain "AAAAAAAAAAAAAAAA"? (answer=1)
+### 8. How many sequences contain "AAAAAAAAAAAAAAAA"? (answer=1)
 
 
 
-\*\*Ans: grep "AAAAAAAAAAAAAAAA" GCF\* | wc -l\*\*
+**Ans: grep "AAAAAAAAAAAAAAAA" GCF* | wc -l**
 
 
 
-\### 9. If you were to sort the sequences alphabetically, which sequence (header) would be first in that list? (answer=>NC\_000932.1...)
+### 9. If you were to sort the sequences alphabetically, which sequence (header) would be first in that list? (answer=>NC_000932.1...)
 
 
 
-\*\*Ans: grep "^>" GCF\* | sort | head -n 1 \*\*
+**Ans: grep "^>" GCF* | sort | head -n 1 **
 
 
 
-\### 10. How would you make a new tab-separated version of this file, where the first column is the headers and the second column are the associated sequences? (show the command(s))
+### 10. How would you make a new tab-separated version of this file, where the first column is the headers and the second column are the associated sequences? (show the command(s))
 
 
 
->NC\_003070.9 Arabidopsis thaliana chromosome 1 sequence    ccctaaaccctaaaccctaaaccctaaacctctG...
+>NC_003070.9 Arabidopsis thaliana chromosome 1 sequence    ccctaaaccctaaaccctaaaccctaaacctctG...
 
->NC\_003071.7 Arabidopsis thaliana chromosome 2, partial sequence    NNNNNNNNNNNNNNNNNNNNNNN...
+>NC_003071.7 Arabidopsis thaliana chromosome 2, partial sequence    NNNNNNNNNNNNNNNNNNNNNNN...
 
-&nbsp;     ... etc.
-
-
-
-\*\*Ans:  paste <(grep "^>" GCF\*) <(grep -v "^>" GCF\*) \*\*
+... etc.
 
 
 
+**Ans:  paste <(grep "^>" GCF*) <(grep -v "^>" GCF*) **
 
 
-\## Reflection
+
+
+
+## Reflection
 
 
 
